@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".calorias">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@id/datos"
+        android:orientation="vertical"
+        android:layout_marginTop="35dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nombre"
+            android:textSize="25dp"
+            android:gravity="center"
+            android:textStyle="bold"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/nombre"
+            android:text="___"
+            android:textSize="20dp"
+            android:gravity="center"/>
+
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Edad"
+            android:textSize="25dp"
+            android:gravity="center"
+            android:textStyle="bold"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/edad"
+            android:text="___"
+            android:textSize="20dp"
+            android:gravity="center"/>
+
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Sexo"
+            android:textSize="25dp"
+            android:gravity="center"
+            android:textStyle="bold"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/sexo"
+            android:text="___"
+            android:textSize="20dp"
+            android:gravity="center"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_below="@+id/datos"
+        android:id="@+id/datosextras">
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="60dp"
+            android:text="Peso"
+            android:textSize="25dp"
+            android:textStyle="bold"
+            android:gravity="center"/>
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="60dp"
+            android:gravity="center"
+            android:text="Altura"
+            android:textSize="25dp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_below="@+id/datosextras"
+        android:id="@+id/datosextras2">
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="60dp"
+            android:text="___"
+            android:textSize="20dp"
+            android:gravity="center"
+            android:id="@+id/peso"/>
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="60dp"
+            android:gravity="center"
+            android:text="___"
+            android:textSize="20dp"
+            android:id="@+id/altura"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="25dp"
+        android:orientation="horizontal"
+        android:layout_below="@+id/datosextras2"
+        android:id="@+id/datosextras3">
+
+       <EditText
+           android:layout_width="150dp"
+           android:layout_height="wrap_content"
+           android:layout_marginHorizontal="38dp"
+           android:gravity="center"
+           android:hint="Peso"
+           android:inputType="numberDecimal|numberSigned"
+           android:id="@+id/et_peso"/>
+        <EditText
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="38dp"
+            android:gravity="center"
+            android:hint="Altura"
+            android:inputType="numberDecimal|numberSigned"
+            android:id="@+id/et_altura"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/calcular"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/datosextras3"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp"
+        android:text="Calcular tasa de metabolica basal"
+        android:textSize="15dp" />
+
+    <TextView
+        android:id="@+id/tasa_basal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/calcular"
+        android:layout_marginTop="45dp"
+        android:gravity="center"
+        android:text="Tu Tasa Metabolica Basal es de: "
+        android:textSize="30dp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/voler"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#3F51B5"
+        android:text="salir"
+        android:textSize="30dp"
+        android:layout_below="@id/tasa_basal"
+        android:layout_marginTop="20dp"/>
+
+</RelativeLayout>
